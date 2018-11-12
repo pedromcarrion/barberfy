@@ -1,0 +1,16 @@
+docker:
+  host: "${DOCKER_IP:localhost}"
+
+eureka:
+  client:
+    enabled: true
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${docker.host}:10000/eureka/v2/
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${docker.host}:5432/msfcadshabitaclia
+    username: barberfy
+    password: barferfy

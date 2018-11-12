@@ -1,0 +1,25 @@
+spring:
+  main:
+    banner-mode: "OFF"
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/msfcadshabitaclia
+    username: barberfy
+    password: barferfy
+
+server:
+  port: 8000
+  compression:
+    enabled: true
+    mime-types: application/json
+
+
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 2000
+  MaxAutoRetries: 1
+
+
+springfox.documentation.swagger.v2.path: /schema
+
